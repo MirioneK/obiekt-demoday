@@ -3,633 +3,284 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Demo Day Obiekt Business Accelerator — 31.01.2026, Obiekt Innovation Hub (ul. Mazowiecka 24/1). Pitch startupów, keynote, networking." />
+  <meta name="description" content="Demo Day Obiekt Business Accelerator — 31.01.2026 (sobota) 18:00, Obiekt Innovation Hub (ul. Mazowiecka 24/1)." />
   <meta name="theme-color" content="#0B0F14" />
-
-  <meta property="og:title" content="Demo Day — Obiekt Business Accelerator" />
-  <meta property="og:description" content="Dołącz do nas i rozwijaj polski ekosystem innowacji. 31.01.2026, Obiekt Innovation Hub (ul. Mazowiecka 24/1)." />
-  <!-- Podmień na ścieżkę do Twojej grafiki udostępnianej (np. ulotka) -->
-  <meta property="og:image" content="assets/flyer.jpg" />
-  <meta property="og:type" content="website" />
-
   <title>Demo Day — Obiekt Business Accelerator</title>
 
   <style>
     :root{
-      --bg: #0B0F14;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --muted2: rgba(255,255,255,.55);
-      --line: rgba(255,255,255,.12);
-      --accent: #6EE7FF;
-      --accent2: #A78BFA;
-      --radius: 18px;
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
-      --max: 1100px;
+      --bg:#0B0F14;
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.55);
+      --line:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.06);
+      --accent:#6EE7FF;
+      --accent2:#A78BFA;
+      --radius:18px;
+      --shadow:0 18px 55px rgba(0,0,0,.45);
+      --max:980px;
     }
-
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 15% 0%, rgba(110,231,255,.18), transparent 60%),
-                  radial-gradient(900px 500px at 85% 10%, rgba(167,139,250,.16), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.5;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 0%, rgba(110,231,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(167,139,250,.16), transparent 55%),
+        var(--bg);
+      line-height:1.55;
     }
-
-    a{ color: inherit; text-decoration: none; }
-    .wrap{ width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(11,15,20,.82), rgba(11,15,20,.55));
-      border-bottom: 1px solid var(--line);
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:28px 0 44px;}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      margin-bottom:16px;
     }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding: 14px 0;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 240px;
-    }
-
+    .brand{display:flex; align-items:center; gap:12px;}
     .brand img{
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 6px;
+      width:44px;height:44px;border-radius:12px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      padding:6px;
     }
-
-    .brand .t1{
-      font-size: 14px;
-      color: var(--muted);
-      letter-spacing: .2px;
-    }
-    .brand .t2{
-      font-size: 15px;
-      color: var(--text);
-      letter-spacing: .2px;
-    }
-
-    .links{
-      display:flex;
-      align-items:center;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .links a{
-      font-size: 14px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-    }
-    .links a:hover{
-      color: var(--text);
-      border-color: rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
-
-    .cta{
-      display:flex;
-      gap:10px;
-      align-items:center;
-    }
+    .brand .t1{font-size:14px;color:var(--muted);letter-spacing:.2px}
+    .brand .t2{font-size:15px;color:var(--text);letter-spacing:.2px;font-weight:560}
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 10px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-size: 14px;
-      letter-spacing: .2px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.22);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      user-select:none;
-      white-space: nowrap;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      font-size:14px; letter-spacing:.2px;
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none; white-space:nowrap;
     }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.20); }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.20);}
     .btn.primary{
-      border-color: rgba(110,231,255,.35);
-      background: linear-gradient(135deg, rgba(110,231,255,.20), rgba(167,139,250,.18));
+      border-color:rgba(110,231,255,.35);
+      background:linear-gradient(135deg, rgba(110,231,255,.20), rgba(167,139,250,.18));
     }
 
-    /* HERO */
     .hero{
-      padding: 34px 0 26px;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .heroCard{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-      box-shadow: var(--shadow);
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      box-shadow:var(--shadow);
       overflow:hidden;
-      position: relative;
-      min-height: 360px;
+      position:relative;
+      min-height:320px;
+      margin-bottom:18px;
     }
-
-    .heroImg{
-      position:absolute;
-      inset:0;
+    .heroBg{
+      position:absolute; inset:0;
       background:
         linear-gradient(90deg, rgba(11,15,20,.92) 0%, rgba(11,15,20,.65) 52%, rgba(11,15,20,.30) 100%),
         url("assets/hero.jpg") center/cover no-repeat;
-      filter: saturate(1.05) contrast(1.05);
+      filter:saturate(1.05) contrast(1.05);
     }
-
-    /* Podmień assets/hero.jpg na Twoje tło.
-       Możesz użyć przerobionego zdjęcia (startup vibe) jako hero. */
-
     .heroInner{
-      position: relative;
-      padding: 28px 26px;
-      display:flex;
-      flex-direction:column;
-      gap: 14px;
-      height: 100%;
+      position:relative;
+      padding:26px 24px;
+      display:flex; flex-direction:column; gap:12px;
+      height:100%;
     }
-
-    .pillRow{
-      display:flex;
-      gap:10px;
-      flex-wrap: wrap;
-    }
+    .pills{display:flex; gap:10px; flex-wrap:wrap;}
     .pill{
-      font-size: 13px;
-      color: var(--muted);
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      padding: 7px 10px;
-      border-radius: 999px;
+      font-size:13px; color:var(--muted);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+      padding:7px 10px;
+      border-radius:999px;
     }
+    h1{margin:0; font-size:clamp(28px, 3.2vw, 44px); line-height:1.05; letter-spacing:.2px; font-weight:600;}
+    .sub{color:var(--muted); font-size:16px; max-width:72ch; margin:0;}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;}
 
-    h1{
-      margin: 0;
-      font-size: clamp(30px, 3.6vw, 46px);
-      letter-spacing: .2px;
-      font-weight: 520;
-      line-height: 1.05;
-    }
-
-    .sub{
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 62ch;
-    }
-
-    .heroActions{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
-
-    .metaRow{
-      margin-top:auto;
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 12px;
-    }
-    .meta{
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      border-radius: 16px;
-      padding: 12px 12px;
-    }
-    .meta .k{
-      font-size: 12px;
-      color: var(--muted2);
-      letter-spacing: .25px;
-    }
-    .meta .v{
-      margin-top: 4px;
-      font-size: 14px;
-      color: var(--text);
-      letter-spacing: .15px;
-      font-weight: 520;
-    }
-
-    /* SIDE CARD */
-    .sideCard{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-    .sideTop{
-      padding: 18px 18px 10px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-    }
-    .sideTitle{
-      font-size: 14px;
-      color: var(--muted);
-      letter-spacing: .2px;
-    }
-    .sideBody{
-      padding: 14px 18px 18px;
-      display:flex;
-      flex-direction:column;
-      gap: 12px;
-    }
-    .note{
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      border-radius: 16px;
-      padding: 12px 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .flyer{
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      overflow:hidden;
-    }
-    .flyer img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-
-    /* SECTIONS */
-    section{ padding: 18px 0; }
-    .grid2{
+    .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: start;
+      gap:18px;
+      align-items:start;
     }
-
     .card{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      box-shadow: 0 12px 44px rgba(0,0,0,.28);
-      padding: 18px 18px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      box-shadow:0 12px 44px rgba(0,0,0,.28);
+      padding:18px;
+    }
+    .h2{margin:0 0 10px; font-size:18px; font-weight:600; letter-spacing:.2px;}
+    .p{margin:0; color:var(--muted); font-size:15px;}
+
+    .msg{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:15px;
+      white-space:pre-line;
     }
 
-    .h2{
-      font-size: 18px;
-      color: var(--text);
-      font-weight: 520;
-      margin: 0 0 10px;
-      letter-spacing: .2px;
-    }
-    .p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .agenda{
+    .list{
+      margin:12px 0 0;
+      padding:0;
+      list-style:none;
       display:flex;
       flex-direction:column;
-      gap: 10px;
-      margin-top: 12px;
+      gap:10px;
     }
-    .slot{
-      display:grid;
-      grid-template-columns: 120px 1fr;
-      gap: 12px;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-    }
-    .time{
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 520;
-      letter-spacing: .15px;
-    }
-    .desc{
-      color: var(--muted);
-      font-size: 14px;
-      letter-spacing: .15px;
-    }
-
-    .mini{
+    .item{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      border-radius:16px;
+      padding:12px 12px;
       display:flex;
-      flex-direction:column;
-      gap: 10px;
+      gap:10px;
+      align-items:flex-start;
     }
+    .emoji{font-size:18px; line-height:1.2; margin-top:1px;}
+    .itxt{color:var(--muted); font-size:14.5px;}
 
     .kv{
-      display:grid;
-      grid-template-columns: 120px 1fr;
-      gap: 12px;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
+      display:grid; grid-template-columns:120px 1fr; gap:12px;
+      padding:12px; border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      margin-top:10px;
     }
-    .kv .k{
-      color: var(--muted2);
-      font-size: 13px;
-    }
-    .kv .v{
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 520;
-    }
+    .kv .k{color:var(--muted2); font-size:13px;}
+    .kv .v{color:var(--text); font-size:14px; font-weight:600;}
 
     footer{
-      padding: 26px 0 34px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      margin-top: 8px;
-      color: var(--muted2);
-      font-size: 13px;
-    }
-    .foot{
+      margin-top:18px;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding-top:18px;
+      color:var(--muted2);
+      font-size:13px;
       display:flex;
-      align-items:flex-start;
       justify-content:space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
     }
 
-    /* Responsive */
     @media (max-width: 900px){
-      .heroGrid{ grid-template-columns: 1fr; }
-      .metaRow{ grid-template-columns: 1fr; }
-      .grid2{ grid-template-columns: 1fr; }
-      .slot{ grid-template-columns: 1fr; }
-      .kv{ grid-template-columns: 1fr; }
-      .brand{ min-width: unset; }
+      .grid{grid-template-columns:1fr;}
+      .kv{grid-template-columns:1fr;}
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="#top" aria-label="Obiekt Business Accelerator">
-          <!-- Podmień na Twoje logo -->
-          <img src="assets/obiekt-logo.png" alt="Obiekt logo" />
-          <div>
-            <div class="t1">Obiekt Business Accelerator</div>
-            <div class="t2">Demo Day</div>
-          </div>
-        </a>
-
-        <nav class="links" aria-label="Nawigacja">
-          <a href="#o-wydarzeniu">O wydarzeniu</a>
-          <a href="#agenda">Agenda</a>
-          <a href="#miejsce">Miejsce</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-
-        <div class="cta">
-          <!-- Podmień href na link do rejestracji albo formularza -->
-          <a class="btn primary" href="#kontakt">Dołącz</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <div class="wrap hero">
-      <div class="heroGrid">
-        <div class="heroCard">
-          <div class="heroImg" role="img" aria-label="Demo Day background"></div>
-          <div class="heroInner">
-            <div class="pillRow">
-              <span class="pill">31.01.2026 (sobota)</span>
-              <span class="pill">Obiekt Innovation Hub</span>
-              <span class="pill">Pitch • keynote • networking</span>
-            </div>
-
-            <h1>Dołącz do nas i rozwijaj polski ekosystem innowacji</h1>
-            <p class="sub">
-              Demo Day Obiekt Business Accelerator to wieczór prezentacji startupów, krótkiego keynote i rozmów 1:1.
-              Wpadnij poznać founderów, partnerów i ludzi, którzy budują realne produkty.
-            </p>
-
-            <div class="heroActions">
-              <a class="btn primary" href="#agenda">Zobacz agendę</a>
-              <a class="btn" href="#miejsce">Sprawdź lokalizację</a>
-            </div>
-
-            <div class="metaRow" aria-label="Najważniejsze informacje">
-              <div class="meta">
-                <div class="k">Data</div>
-                <div class="v">31.01.2026 (sobota)</div>
-              </div>
-              <div class="meta">
-                <div class="k">Miejsce</div>
-                <div class="v">Obiekt Innovation Hub</div>
-              </div>
-              <div class="meta">
-                <div class="k">Adres</div>
-                <div class="v">ul. Mazowiecka 24/1</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="sideCard" aria-label="Materiały">
-          <div class="sideTop">
-            <div class="sideTitle">Ulotka wydarzenia</div>
-            <!-- opcjonalnie: link do pobrania pdf -->
-            <a class="btn" href="assets/flyer.jpg" download>Pobierz</a>
-          </div>
-
-          <div class="sideBody">
-            <div class="flyer">
-              <!-- Podmień na ulotkę (jpg/png) -->
-              <img src="assets/flyer.jpg" alt="Ulotka Demo Day" loading="lazy" />
-            </div>
-
-            <div class="note">
-              Tip: jeśli chcesz ultra czysty look, użyj przerobionego zdjęcia jako tła hero (assets/hero.jpg),
-              a ulotkę zostaw jako materiał do pobrania.
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <section id="o-wydarzeniu">
-        <div class="grid2">
-          <div class="card">
-            <h2 class="h2">O wydarzeniu</h2>
-            <p class="p">
-              Demo Day to finałowy wieczór programu akceleracyjnego, podczas którego startupy prezentują swoje rozwiązania,
-              opowiadają o postępach i rozmawiają z uczestnikami po części scenicznej.
-            </p>
-            <div style="height:12px"></div>
-            <p class="p">
-              W programie: welcome coffee, oficjalne rozpoczęcie i keynote, sesje pitchów, głosowanie i wręczenie nagród,
-              a na koniec networking.
-            </p>
-          </div>
-
-          <div class="card" id="miejsce">
-            <h2 class="h2">Miejsce</h2>
-            <div class="mini" aria-label="Dane miejsca">
-              <div class="kv">
-                <div class="k">Obiekt</div>
-                <div class="v">Obiekt Innovation Hub</div>
-              </div>
-              <div class="kv">
-                <div class="k">Adres</div>
-                <div class="v">ul. Mazowiecka 24/1</div>
-              </div>
-              <div class="kv">
-                <div class="k">Start</div>
-                <div class="v">18:00</div>
-              </div>
-            </div>
-
-            <!-- Jeśli masz link do mapy, wklej go do href -->
-            <div style="height:12px"></div>
-            <a class="btn" href="#" aria-label="Otwórz mapę (podmień link)">Otwórz mapę</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="agenda">
-        <div class="card">
-          <h2 class="h2">Agenda</h2>
-          <p class="p">Plan wydarzenia (godziny orientacyjne).</p>
-
-          <div class="agenda" aria-label="Agenda wydarzenia">
-            <div class="slot">
-              <div class="time">18:00–18:30</div>
-              <div class="desc">Welcome coffee</div>
-            </div>
-            <div class="slot">
-              <div class="time">18:30–18:45</div>
-              <div class="desc">Oficjalne rozpoczęcie, keynote speech</div>
-            </div>
-            <div class="slot">
-              <div class="time">18:45–19:05</div>
-              <div class="desc">Pitche startupów</div>
-            </div>
-            <div class="slot">
-              <div class="time">19:05–19:20</div>
-              <div class="desc">Coffee break</div>
-            </div>
-            <div class="slot">
-              <div class="time">19:20–19:40</div>
-              <div class="desc">Pitche startupów</div>
-            </div>
-            <div class="slot">
-              <div class="time">19:40–20:00</div>
-              <div class="desc">Głosowanie na zwycięski pitch, wręczenie nagród</div>
-            </div>
-            <div class="slot">
-              <div class="time">20:00+</div>
-              <div class="desc">Networking</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="kontakt">
-        <div class="grid2">
-          <div class="card">
-            <h2 class="h2">Dołącz</h2>
-            <p class="p">
-              Jeśli chcesz dołączyć jako uczestnik, partner lub startup, skontaktuj się z organizatorem albo podepnij link do rejestracji.
-            </p>
-            <div style="height:12px"></div>
-
-            <!-- Podmień mail i link -->
-            <div class="heroActions">
-              <a class="btn primary" href="mailto:kontakt@twojadomena.pl?subject=Demo%20Day%20—%20zgłoszenie">Napisz e-mail</a>
-              <a class="btn" href="#" aria-label="Link do rejestracji (podmień)">Rejestracja</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h2 class="h2">Organizator</h2>
-            <p class="p">
-              Obiekt Business Accelerator
-            </p>
-            <div style="height:12px"></div>
-
-            <div class="mini">
-              <div class="kv">
-                <div class="k">Wydarzenie</div>
-                <div class="v">Demo Day</div>
-              </div>
-              <div class="kv">
-                <div class="k">Data</div>
-                <div class="v">31.01.2026</div>
-              </div>
-              <div class="kv">
-                <div class="k">Miejsce</div>
-                <div class="v">Obiekt Innovation Hub</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <!-- logo opcjonalne; jak nie masz, usuń img -->
+        <img src="assets/logo.png" alt="Obiekt logo" />
         <div>
-          © <span id="y"></span> Obiekt Business Accelerator
-          <div style="margin-top:6px;color:var(--muted2);max-width:70ch;">
-            Minimalistyczna strona wydarzenia. Podmień pliki w folderze assets/ na swoje grafiki: logo, ulotkę i tło hero.
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end;">
-          <a class="btn" href="#top">Do góry</a>
-          <!-- Podmień na linki -->
-          <a class="btn" href="#" aria-label="LinkedIn (podmień link)">LinkedIn</a>
-          <a class="btn" href="#" aria-label="Strona organizatora (podmień link)">Strona</a>
+          <div class="t1">Obiekt Business Accelerator</div>
+          <div class="t2">Demo Day</div>
         </div>
       </div>
+
+      <a class="btn primary" href="agenda.pdf" download>Pobierz agendę (PDF)</a>
     </div>
-  </footer>
+
+    <section class="hero" aria-label="Hero">
+      <div class="heroBg" aria-hidden="true"></div>
+      <div class="heroInner">
+        <div class="pills">
+          <span class="pill">31.01.2026 (sobota) • 18:00</span>
+          <span class="pill">Obiekt Innovation Hub</span>
+          <span class="pill">Pitch • keynote • networking</span>
+        </div>
+
+        <h1>Dołącz do nas i rozwijaj polski ekosystem innowacji</h1>
+
+        <p class="sub">
+          W imieniu Obiekt Business Accelerator zapraszamy na wydarzenie Demo Day organizowane 31.01.2026 (sobota) o godz. 18:00.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="agenda.pdf" download>Pobierz agendę (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card" aria-label="Treść zaproszenia">
+        <h2 class="h2">Mili Państwo,</h2>
+
+        <p class="p">
+          Będzie to wyjątkowa okazja do:
+        </p>
+
+        <div class="list" aria-label="Powody, by wpaść">
+          <div class="item">
+            <div class="emoji">👉</div>
+            <div class="itxt">
+              Wysłuchania konkursowych pitchów startupów, opisujących ich pomysły na niezwykle innowacyjne i nietuzinkowe produkty
+              i zagłosowania na zwycięski zespół
+            </div>
+          </div>
+          <div class="item">
+            <div class="emoji">👉</div>
+            <div class="itxt">
+              Luźnego networkingu w inspirującym gronie przy kawie, przekąskach i piwie (% i non-%)
+            </div>
+          </div>
+          <div class="item">
+            <div class="emoji">👉</div>
+            <div class="itxt">
+              Budowania wspólnie polskiego środowiska innowacji
+            </div>
+          </div>
+        </div>
+
+        <div class="msg">
+Zapisy przez formularz (reakcja 🦄) pod wiadomością na Telegram.
+
+Gorąco zapraszamy do upiększenia tego wyjątkowego wieczoru swoją obecnością!
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Szczegóły wydarzenia">
+        <h2 class="h2">Szczegóły</h2>
+
+        <div class="kv">
+          <div class="k">Data</div>
+          <div class="v">31.01.2026 (sobota)</div>
+        </div>
+        <div class="kv">
+          <div class="k">Godzina</div>
+          <div class="v">18:00</div>
+        </div>
+        <div class="kv">
+          <div class="k">Miejsce</div>
+          <div class="v">Obiekt Innovation Hub</div>
+        </div>
+        <div class="kv">
+          <div class="k">Adres</div>
+          <div class="v">ul. Mazowiecka 24/1</div>
+        </div>
+
+        <div class="actions" style="margin-top:12px;">
+          <a class="btn primary" href="agenda.pdf" download>Pobierz agendę (PDF)</a>
+          <!-- tu możesz wkleić link do mapy -->
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mazowiecka%2024%2F1%2C%20Krakow" title="Otworz mape">Otwórz mapę</a>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="y"></span> Obiekt Business Accelerator</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn" href="agenda.pdf" download>Agenda PDF</a>
+      </div>
+    </footer>
+  </div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
